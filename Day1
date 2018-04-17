@@ -1,0 +1,56 @@
+package chooseYourOwnAdventure;
+import java.util.Scanner;
+
+public class Day1 {
+	
+	public static void main(String[] args){
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Welcome to [ ]\nIt's a bright, warm, October, New Zealand Morning\nsomething bad happens...");
+		System.out.println(" ");
+		System.out.println("BOOM...");
+		System.out.println(" ");
+		System.out.println("You wash up on an abandoned island completely disoriented,\ndo you decide to 'look for food', 'give up and die', or 'look for people'?");
+		System.out.print("Your decision: ");
+		String input = scanner.nextLine();
+		System.out.println(" ");
+		
+		if(input.equalsIgnoreCase("look for food")){
+			System.out.println("You're looking for food, looking... ah! you've found some strange looking pink fruit on a nearby bush,\n"
+					+ "do you pick the fuit and 'eat it', or 'use it as bait' to catch other fruit?");
+			System.out.print("your decision: ");
+			input = scanner.nextLine();
+			System.out.println(" ");
+			
+			if(input.equalsIgnoreCase("eat it")){
+				System.out.println("eaten all the fuit,\nwould you like to 'plant the seeds', or 'go look for more'?");
+				System.out.print("your decision: ");
+				input = scanner.nextLine();
+				System.out.println(" ");
+				
+				if(input.equalsIgnoreCase("plant the seeds")){
+					System.out.println("ARE YOU CARZY?! You'll starve before anything grows!\nRest and figure out what to do in the morning");
+					System.out.println(" ");
+					System.out.println("END OF DAY 1");
+				}
+				else {System.out.println("Invalid input");}
+			}
+			else if(input.equalsIgnoreCase("use it as bait")){
+				System.out.println("Unfortunately, you don't catch any fruit..., but you do catch in island rabbit/n"
+						+ "do you 'keep it as a pet', or 'Yum, dinner!'?");
+			}
+			else {System.out.println("Invalid input");}
+		}
+		else if(input.equalsIgnoreCase("Give up and die")){System.out.println("R.I.P. You");}
+			
+		else if(input.equalsIgnoreCase("look for people")){
+			System.out.println("Before you begine your search for intelligent life, you need to pick a direction\n"
+					+ "do you travel to your 'right' along the coast, or 'left' along the coast?");
+		}
+		else {System.out.println("Invalid input");}
+		
+		
+		scanner.close();
+	}
+	
+}
